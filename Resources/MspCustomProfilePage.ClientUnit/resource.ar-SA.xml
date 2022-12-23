@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ar-SA">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.NotesAndFilesTabCaption.Value" Value="المرفقات والملاحظات" />
+			<Item Name="LocalizableStrings.NotesGroupCaption.Value" Value="الملاحظات" />
+			<Item Name="LocalizableStrings.TabVisaCaption.Value" Value="الموافقات" />
+		</Items>
+	</Group>
+</Resources>

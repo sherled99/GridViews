@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="nl-NL">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.NotesAndFilesTabCaption.Value" Value="Bijlagen en notities" />
+			<Item Name="LocalizableStrings.NotesGroupCaption.Value" Value="Aantekeningen" />
+			<Item Name="LocalizableStrings.TabVisaCaption.Value" Value="Keurmerken" />
+		</Items>
+	</Group>
+</Resources>

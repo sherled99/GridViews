@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="th-TH">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.NotesAndFilesTabCaption.Value" Value="สิ่งที่แนบและบันทึกย่อ" />
+			<Item Name="LocalizableStrings.NotesGroupCaption.Value" Value="บันทึกย่อ" />
+			<Item Name="LocalizableStrings.TabVisaCaption.Value" Value="การอนุมัติ" />
+		</Items>
+	</Group>
+</Resources>

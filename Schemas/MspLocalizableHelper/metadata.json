@@ -1,0 +1,30 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "093b2eaf-5da4-4de5-a639-ef554ae83428",
+      "A2": "MspLocalizableHelper",
+      "A5": "c20b2797-8f32-40a4-9b82-5c607b73716c",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "9cc7c6a4-62ba-4321-822e-8555957e3896",
+          "A2": "GridDetailName",
+          "A3": "093b2eaf-5da4-4de5-a639-ef554ae83428",
+          "A4": "093b2eaf-5da4-4de5-a639-ef554ae83428",
+          "A5": "c20b2797-8f32-40a4-9b82-5c607b73716c"
+        }
+      ],
+      "B3": [],
+      "B6": "4931368f-1cf0-4779-af41-99680f16b9a4",
+      "B8": "7.15.1.1295",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD4": 1,
+      "HD6": "null",
+      "HD5": [],
+      "HD7": [],
+      "HD8": [],
+      "HD11": []
+    }
+  }
+}

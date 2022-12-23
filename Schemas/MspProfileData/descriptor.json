@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "a3c2e5aa-9bfb-4db5-a2ea-a1a9d72d38c6",
+    "Name": "MspProfileData",
+    "ModifiedOnUtc": "\/Date(1671810878000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Advanced profile settings",
+    "DependsOn": []
+  }
+}

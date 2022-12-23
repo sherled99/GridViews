@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "d8813379-1a05-4ef7-abde-1c70782d1091",
+    "Name": "MspCustomProfileDetail",
+    "ModifiedOnUtc": "\/Date(1574082037000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема детали: \"Профили пользователя\""
+  }
+}

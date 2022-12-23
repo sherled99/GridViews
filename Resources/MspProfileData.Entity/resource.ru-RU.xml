@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Расширенная настройка колонок" />
+			<Item Name="Columns.MspKey.Caption" Value="Ключ" />
+			<Item Name="Columns.MspName.Caption" Value="Название" />
+			<Item Name="Columns.MspSchemaName.Caption" Value="Название схемы" />
+		</Items>
+	</Group>
+</Resources>

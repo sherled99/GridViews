@@ -1,0 +1,25 @@
+﻿{
+  "Descriptor": {
+    "UId": "d1ff2036-2f86-dc64-d9f4-e4357cc27e95",
+    "Name": "GridViews",
+    "ModifiedOnUtc": "\/Date(1671798656000)\/",
+    "Maintainer": "Customer",
+    "DependsOn": [
+      {
+        "UId": "613fd913-be03-46ce-909b-f44e4225469e",
+        "PackageVersion": "7.8.0",
+        "Name": "UIv2"
+      },
+      {
+        "UId": "82306a23-d5c6-420b-b81b-2d145f8e2f34",
+        "PackageVersion": "7.8.0",
+        "Name": "SSP"
+      },
+      {
+        "UId": "9310225d-1ff8-45f2-9f34-9faf094d635a",
+        "PackageVersion": "7.8.0",
+        "Name": "Timeline"
+      }
+    ]
+  }
+}

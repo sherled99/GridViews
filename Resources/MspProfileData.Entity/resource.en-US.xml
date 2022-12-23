@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Advanced profile settings" />
+			<Item Name="Columns.MspKey.Caption" Value="Key" />
+			<Item Name="Columns.MspName.Caption" Value="Name" />
+			<Item Name="Columns.MspSchemaName.Caption" Value="Schema name" />
+		</Items>
+	</Group>
+</Resources>

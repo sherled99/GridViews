@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="fa-IR">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.NotesAndFilesTabCaption.Value" Value="ضمایم و یادداشت ها" />
+			<Item Name="LocalizableStrings.NotesGroupCaption.Value" Value="یادداشت ها" />
+			<Item Name="LocalizableStrings.TabVisaCaption.Value" Value="تائیدیه" />
+		</Items>
+	</Group>
+</Resources>

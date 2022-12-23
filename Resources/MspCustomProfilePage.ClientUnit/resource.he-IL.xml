@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="he-IL">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.NotesAndFilesTabCaption.Value" Value="קבצים והערות" />
+			<Item Name="LocalizableStrings.NotesGroupCaption.Value" Value="הערות" />
+			<Item Name="LocalizableStrings.TabVisaCaption.Value" Value="אישורים" />
+		</Items>
+	</Group>
+</Resources>

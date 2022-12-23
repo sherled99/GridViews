@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "99a1ef3e-49d0-493d-b4d7-3ae8e5f12a6b",
+    "Name": "MspCustomProfileBusinessRule",
+    "ModifiedOnUtc": "\/Date(1671805687000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Сохраненный профиль пользователя (Бизнес правила)",
+    "DependsOn": []
+  }
+}

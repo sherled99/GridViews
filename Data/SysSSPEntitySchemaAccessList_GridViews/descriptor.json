@@ -1,0 +1,35 @@
+﻿{
+  "Descriptor": {
+    "UId": "87ecccad-49e3-f604-b7b5-ff33fe3be839",
+    "Name": "SysSSPEntitySchemaAccessList_GridViews",
+    "ModifiedOnUtc": "\/Date(1671811458000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "3f07dee2-b2d5-4a28-9a59-1ef7d6fa85ab",
+      "Name": "SysSSPEntitySchemaAccessList"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "8d2d0d7c-7a7d-4bb1-ba25-e10883e91a1c",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "EntitySchemaUId",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "e0aa088b-0b83-44e5-b8c8-23c8c56aa362",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "IsPreset",
+        "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
+      }
+    ]
+  }
+}

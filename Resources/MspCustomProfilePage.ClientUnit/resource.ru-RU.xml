@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Карточка схемы: &quot;Сохраненный профиль пользователя&quot;" />
+			<Item Name="LocalizableStrings.NotesAndFilesTabCaption.Value" Value="Файлы и примечания" />
+			<Item Name="LocalizableStrings.NotesGroupCaption.Value" Value="Примечания" />
+			<Item Name="LocalizableStrings.Tabcd5bb956TabLabelGroup46daa9a6GroupCaption.Value" Value="Фильтрация" />
+			<Item Name="LocalizableStrings.Tabcd5bb956TabLabelGroupaf621771GroupCaption.Value" Value="Профиль" />
+			<Item Name="LocalizableStrings.Tabcd5bb956TabLabelTabCaption.Value" Value="Настройки" />
+			<Item Name="LocalizableStrings.TabVisaCaption.Value" Value="Визы" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Section schema: &quot;Advanced profile settings&quot;" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Advanced profile settings" />
+		</Items>
+	</Group>
+</Resources>

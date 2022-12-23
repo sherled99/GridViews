@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "9582648d-cfce-4b8f-928f-5f008c41edf0",
+    "Name": "MspProfileData1Section",
+    "ModifiedOnUtc": "\/Date(1574081718000)\/",
+    "Parent": {
+      "UId": "7912fb69-4fee-429f-8b23-93943c35d66d",
+      "Name": "BaseSectionV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Section schema: \"Advanced profile settings\""
+  }
+}

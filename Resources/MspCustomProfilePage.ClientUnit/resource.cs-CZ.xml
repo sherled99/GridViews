@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="cs-CZ">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.NotesAndFilesTabCaption.Value" Value="Přílohy a poznámky" />
+			<Item Name="LocalizableStrings.NotesGroupCaption.Value" Value="Poznámky" />
+			<Item Name="LocalizableStrings.TabVisaCaption.Value" Value="Schválení" />
+		</Items>
+	</Group>
+</Resources>

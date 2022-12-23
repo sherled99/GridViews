@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="es-ES">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.NotesAndFilesTabCaption.Value" Value="Archivos y notas" />
+			<Item Name="LocalizableStrings.NotesGroupCaption.Value" Value="Notas" />
+			<Item Name="LocalizableStrings.TabVisaCaption.Value" Value="Aprobaciones" />
+		</Items>
+	</Group>
+</Resources>
