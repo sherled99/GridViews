@@ -30,6 +30,14 @@ namespace Terrasoft.Configuration
 			helper.SaveCustomProfiles(profileData);
 		}
 
-	}
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
+        public void UpdateDefaultSettings(string key)
+        {
+            MspGridHelper helper = new MspGridHelper(UserConnection);
+            helper.UpdateDefaultSettings(key);
+        }
+
+    }
 	
 }
