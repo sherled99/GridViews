@@ -116,41 +116,5 @@ namespace Terrasoft.Configuration
 			entity.SetColumnValue("MspValue", profileValue);
 			entity.Save(false);
 		}
-
-		/// <summary>
-		/// Обновлени колонок на стандартные в системе
-		/// </summary>
-		/// <param name="key"></param>
-		public void UpdateDefaultSettings(string key)
-		{
-			var objectData = GetObjectData(key);
-            if (objectData == null)
-			{
-				if (_userConnection.CurrentUser.ConnectionType.ToString() != "SSP") return;
-                objectData = GetObjectData(key.Replace("Portal", String.Empty));
-            }
-
-            var update = new Update(_userConnection.AppConnection.SystemUserConnection, nameof(SysProfileData))
-                    .Set(("ObjectData"), Column.Parameter(objectData))
-                    .Where(nameof(SysProfileData.ContactId)).IsEqual(Column.Const(_userConnection.CurrentUser.ContactId))
-					.And(nameof(SysProfileData.Key)).IsEqual(Column.Parameter(key))
-					.And(nameof(SysProfileData.SysCultureId)).IsEqual(Column.Const(_userConnection.CurrentUser.SysCultureId)) as Update;
-            update.Execute();
-
-        }
-
-		private byte[] GetObjectData(string key)
-		{
-            var select =
-                new Select(_userConnection.AppConnection.SystemUserConnection)
-                    .Column("ObjectData")
-                    .From(nameof(SysProfileData))
-                    .Where(nameof(SysProfileData.Key)).IsEqual(Column.Parameter(key))
-					.And(nameof(SysProfileData.ContactId)).IsNull()
-                    .And(nameof(SysProfileData.SysCultureId)).IsEqual(Column.Const(_userConnection.CurrentUser.SysCultureId))
-                as Select;
-            return select.ExecuteScalar<byte[]>();
-        }
-
 	}
 }

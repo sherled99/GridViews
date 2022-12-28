@@ -24,6 +24,19 @@ define("BaseGridDetailV2", [
                 dataValueType: Terrasoft.DataValueType.BOOLEAN,
                 type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
             },
+            TextUrlMem: {
+                dataValueType: Terrasoft.DataValueType.LONG_TEXT,
+                type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+            },
+            DefaultProfileKey:{
+                dataValueType: Terrasoft.DataValueType.TEXT,
+                type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+            },
+            GridSettingsMenuItemIsVisible: {
+                dataValueType: Terrasoft.DataValueType.BOOLEAN,
+                type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+                value: true
+            }
         },
         messages: {},
         modules: /**SCHEMA_MODULES*/ {} /**SCHEMA_MODULES*/,
@@ -36,6 +49,7 @@ define("BaseGridDetailV2", [
                 this.getCustomProfileRecord(function () {
                     parentMethod.call(this, callback, scope);
                 }, this);
+                this.set("DefaultProfileKey", this.getProfileKey());
             },
 
             checkAdminRight: function () {
@@ -76,7 +90,7 @@ define("BaseGridDetailV2", [
                                 ) {
                                     var def = {
                                         caption: "Default",
-                                        tag: "Default",
+                                        tag: this.getProfileKey()
                                     };
                                     this.$ProfileCollection.push(def);
                                 }
@@ -135,6 +149,15 @@ define("BaseGridDetailV2", [
                     Visible: { bindTo: "AvtCanManageAdvancedGridSettings" },
                 });
             },
+
+            getGridSettingsMenuItem: function() {
+				return this.getButtonMenuItem({
+					Caption: {"bindTo": "Resources.Strings.SetupGridMenuCaption"},
+					Click: {"bindTo": "openGridSettings"},
+					"ImageConfig": this.get("Resources.Images.GridSettingsIcon"),
+                    Visible: {"bindTo": "GridSettingsMenuItemIsVisible"}
+				});
+			},
 
             getSwitchProfileMenuItem: function () {
                 return this.getButtonMenuItem({
@@ -215,10 +238,12 @@ define("BaseGridDetailV2", [
             },
 
             switchProfileData: function (tag) {
-                if (tag === "Default") {
-                    this.updateDefaultData();
+                if (tag === this.$DefaultProfileKey) {
+                    this.getStandartProfileData(tag, this.setProfile, this);
+                    this.set("GridSettingsMenuItemIsVisible", true); 
                 } else {
                     this.getNewProfileData(tag, this.setProfile, this);
+                    this.set("GridSettingsMenuItemIsVisible", false); 
                 }
             },
 
@@ -226,32 +251,29 @@ define("BaseGridDetailV2", [
                 if (newProfile) {
                     var gridData = this.getGridData();
                     gridData.clear();
-                    this.setCustomColumnsProfile(newProfile);
                     this.set("GridSettingsChanged", true);
-                    this.reloadGridData();
+                    this.updateDetail({detail: "OpportunityContacts", reloadAll: true, profile: newProfile});
                 }
             },
 
-            updateDefaultData: function () {
-                var request = {
-                    serviceName: "MspGridService",
-                    methodName: "UpdateDefaultSettings",
-                    data: {
-                        key: this.getProfileKey(),
-                    },
-                };
-                this.callService(
-                    request,
-                    function (result) {
-                        this.getStandartProfileData(
-                            this.getProfileKey(),
-                            this.setProfile,
-                            this
-                        );
-                    },
-                    this
-                );
-            },
+            updateDetail: function(config) {
+				this.callParent(arguments);
+				const detailInfo = this.getDetailInfo();
+				this.set("IsEnabled", detailInfo.isEnabled);
+				if (config.reloadAll) {
+					this.set("ActiveRow", null);
+					this.set("SelectedRows", []);
+                    if (config.profile){
+                        this.set("Profile", config.profile);
+                        this.set("ProfileKey", config.profile.key);
+                        this.set("IsGridLoading", false);
+                    }
+                    else{
+                        this.set("ProfileKey", detailInfo.profileKey);
+                    }
+					this.initRelationshipButton(this.loadGridData);
+                }
+			},
 
             getCustomGridSettingsValues: function () {
                 var profile = this.$Profile;
@@ -297,7 +319,7 @@ define("BaseGridDetailV2", [
                     config.defaultValues = this.getCustomGridSettingsValues();
                 }
                 this.openCardInChain(config);
-            },
+            }
         },
         rules: {},
     };
