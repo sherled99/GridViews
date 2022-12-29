@@ -88,6 +88,7 @@ define("BaseGridDetailV2", [
                                     this.$ProfileCollection &&
                                     this.$ProfileCollection.length > 0
                                 ) {
+
                                     var def = {
                                         caption: "Default",
                                         tag: this.getProfileKey()
@@ -127,6 +128,7 @@ define("BaseGridDetailV2", [
                 Terrasoft.each(
                     this.$ProfileCollection,
                     function (profile) {
+                        if (profile.tag == this.$DefaultProfileKey) savedProfile.addItem(this.getButtonMenuSeparator());
                         savedProfile.addItem(
                             this.getButtonMenuItem(
                                 this.switchProfileButtonConfig(profile)
